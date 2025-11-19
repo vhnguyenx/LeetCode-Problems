@@ -1,4 +1,4 @@
-package ArrayAndString;
+package Array;
 
 public class MoveZeroes {
     public void moveZeroes(int[] nums) {

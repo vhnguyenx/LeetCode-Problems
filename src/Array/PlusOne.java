@@ -1,4 +1,4 @@
-package ArrayAndString;
+package Array;
 
 public class PlusOne {
     public int[] plusOne(int[] digits) {
