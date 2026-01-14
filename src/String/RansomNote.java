@@ -28,4 +28,21 @@ public class RansomNote {
 
         return true;
     }
+
+    public boolean canConstructV2(String ransomNote, String magazine) {
+        int[] base = new int[26];
+
+        for (int i = 0; i < magazine.length(); i++) {
+            base[magazine.charAt(i) - 'a']++;
+        }
+
+        for (int i = 0; i < ransomNote.length(); i++) {
+            base[ransomNote.charAt(i) - 'a']--;
+            if (base[ransomNote.charAt(i) - 'a'] < 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
