@@ -18,4 +18,20 @@ public class FirstUniqueCharacterInAString {
         }
         return -1;
     }
+
+    public int firstUniqCharV2(String s) {
+        int[] base = new int[26];
+
+        for (char c : s.toCharArray()) {
+            base[c - 'a']++;
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+            if (base[s.charAt(i) - 'a'] == 1) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
 }
